@@ -4,13 +4,20 @@
   "description": "I'll pencil you in on Tuesday around noonish?",
   "main": "index.js",
   "dependencies": {
-    "pg": "^7.4.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0",
+    "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.26.0"
+    "sequelize": "^4.26.0",
+    "sequelize-cli": "^3.2.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sql": "node_modules/sequelize-cli/lib/sequelize",
+    "seed": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
   },
   "repository": {
     "type": "git",

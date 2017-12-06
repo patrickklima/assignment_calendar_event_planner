@@ -1,0 +1,15 @@
+sequelize model:create --name User --attributes "fname:string lname:string username:string email:string"
+
+sequelize model:create --name Calendar --attributes "calendarName:string userId:integer"
+
+sequelize model:create --name Event --attributes "eventName:string description:string startTime:date endTime:date calendarId:integer"
+
+sequelize model:create --name Invitation --attributes "eventId:integer userId:integer"
+
+sequelize seed:create --name user
+
+sequelize seed:create --name calendar
+
+sequelize seed:create --name event
+
+sequelize seed:create --name invitation
