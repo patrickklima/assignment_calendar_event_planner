@@ -2,12 +2,15 @@
   "name": "workspace",
   "version": "1.0.0",
   "description": "I'll pencil you in on Tuesday around noonish?",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
+    "express-method-override-get-post-support": "^1.0.0",
+    "method-override": "^2.3.10",
     "morgan": "^1.9.0",
+    "morgan-toolkit": "^1.0.2",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.26.0",
@@ -16,6 +19,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
     "sql": "node_modules/sequelize-cli/lib/sequelize",
     "seed": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
   },
@@ -24,7 +28,7 @@
     "url": "git+https://github.com/patrickklima/assignment_calendar_event_planner.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "patrickklima",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/patrickklima/assignment_calendar_event_planner/issues"

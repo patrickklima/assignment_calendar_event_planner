@@ -1,0 +1,22 @@
+<h1>Calendars</h1>
+<p>
+  <a href="/calendars/new"><button type="button" class="btn btn-primary">Create Calendar</button></a>
+</p>
+<table class="table table-striped">
+  <tr>
+    <th>Calendar Name</th>
+    <th>User ID</th>
+    <th>Info</th>
+  </tr>
+  {{#each calendars as |calendar|}}
+  <tr>
+    <td>{{calendar.calendarName}}</td>
+    <td>{{calendar.userId}}</td>
+    <td>
+      <a href="/calendars/{{calendar.id}}"><button type="button" class="btn btn-primary">View Calendar</button></a>&nbsp;&nbsp;&nbsp;    
+      <a href="/users/{{calendar.userId}}"><button type="button" class="btn btn-info">View User</button></a>&nbsp;&nbsp;&nbsp;    
+    </td>
+  </tr>
+  {{/each}}
+
+</table>

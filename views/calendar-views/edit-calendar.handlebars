@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <h2>Edit Calendar</h2>
+    <h3>Calendar: {{calendar.calendarName}}</h3>
+    <form action="/calendars/{{calendar.id}}/edit" method="post">
+      <div class="form-group">
+        <label for="name">Calendar Name</label>
+        <input type="text" class="form-control" name="name" value="{{calendar.calendarName}}">
+      </div>
+      <div class="form-group">
+        <label for="userId">User Id</label>
+        <input type="text" class="form-control" name="userId" value="{{calendar.userId}}">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

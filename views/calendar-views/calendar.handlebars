@@ -1,0 +1,15 @@
+<h2>Calendar: {{calendar.name}}</h2>
+<p>
+  <a href="/calendars/{{calendar.id}}/edit"><button type="button" class="btn btn-primary">Edit</button></a>
+  <a href="/calendars/{{calendar.id}}?_method=delete"><button type="button" class="btn btn-danger">Delete</button></a>
+</p>
+<table class="table table-striped">
+  <tr>
+    <th>Calendar Name</th>
+    <th>User Id</th>
+  </tr>
+  <tr>
+    <td>{{calendar.calendarName}}</td>
+    <td>{{calendar.userId}}</td>
+  </tr>
+</table>
